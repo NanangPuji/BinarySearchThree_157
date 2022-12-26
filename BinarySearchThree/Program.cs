@@ -72,8 +72,49 @@ namespace BinarySearchThree
                                 currentnode = currentnode.lchild;
                         }
                     }
-
-                    static void Main(string[] args)
+            public void inorder(node ptr)
+            {
+                if (ROOT == null)
+                {
+                    Console.WriteLine(" tree is empty");
+                    return;
+                }
+                if (ptr != null)
+                {
+                    inorder(ptr.lchild);
+                    Console.WriteLine(ptr.info + " ");
+                    inorder(ptr.rchild);
+                }
+            }
+            public void preorder(node ptr)
+            {
+                if (ROOT == null)
+                {
+                    Console.WriteLine(" tree is empty");
+                    return;
+                }
+                if (ptr != null)
+                {
+                    Console.WriteLine(ptr.info + " ");
+                    preorder(ptr.lchild);
+                    preorder(ptr.rchild);
+                }
+            }
+            public void postorder(node ptr)
+            {
+                if (ROOT == null)
+                {
+                    Console.WriteLine(" tree is empty");
+                    return;
+                }
+                if (ptr != null)
+                {
+                    postorder(ptr.lchild);
+                    postorder(ptr.rchild);
+                    Console.WriteLine(ptr.info + " ");
+                }
+            }
+            static void Main(string[] args)
                     {
                     }
                 }
