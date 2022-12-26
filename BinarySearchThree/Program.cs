@@ -56,12 +56,11 @@ namespace BinarySearchThree
                     {
                         parent.rchild = tmp;
                     }
-                }
-               
 
 
-                static void Main(string[] args)
-                {
+                    static void Main(string[] args)
+                    {
+                    }
                 }
             }
         }
